@@ -1,0 +1,239 @@
+.card {
+    width: 230px;
+    border-radius: 20px;
+    background: #1b233d;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 15px;
+    display: inline-block;
+    margin-top: 70px;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card .top-section {
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, rgb(41, 3, 20) 0%, #d5bb23);
+    position: relative;
+  }
+  
+  .card .top-section .border {
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 130px;
+    background: white;
+    background: #1b233d;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #1b233d;
+  }
+  
+  .card .top-section .border::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+  
+  .card .top-section::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+  
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card .top-section .icons .logo {
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+  }
+  
+  .card .top-section .icons .logo .top-section {
+    height: 100%;
+  }
+  
+  .card .top-section .icons .social-media {
+    height:100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 15px 7px 0;
+    }
+    
+    .card .top-section .icons .social-media .svg {
+    height: 100%;
+    aspect-ratio: 1;
+    fill: white;
+    transition: fill 0.3s;
+    cursor: pointer;
+    }
+    
+    .card .top-section .icons .social-media .svg:hover {
+    fill: #f4b400;
+    }
+    
+    .card .bottom-section {
+    padding: 10px 15px;
+    }
+    
+    .card .bottom-section .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-right: 7px;
+    }
+
+    .card .bottom-section .do{
+        color: bisque;
+    }
+    
+    .card .bottom-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
+    
+    .card .bottom-section .row .item {
+    cursor: pointer;
+    }
+    
+    .card .bottom-section .row .item .big-text {
+    font-size: 16px;
+    color: #f4b400;
+    transition: color 0.3s;
+    }
+    
+    .card .bottom-section .row .item .big-text:hover {
+    color: #ffea00;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .card {
+    width: calc(50% - 30px);
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+    .card {
+    width: calc(100% - 30px);
+    }
+    }
+  
+    .document-form-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+        background: transparent;
+        color: white;
+      }
+      
+      @keyframes borderAnimation {
+        0% { border-color: red; }
+        25% { border-color: blue; }
+        50% { border-color: green; }
+        75% { border-color: yellow; }
+        100% { border-color: red; }
+      }
+      .document-form {
+        display: flex;
+        flex-direction: column;
+        
+      }
+      
+      .input-field {
+        margin-bottom: 10px;
+       
+        input[type="text"]:focus, input[type="file"]:focus {
+            animation: borderAnimation 5s linear infinite;
+        
+          }
+      }
+      
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      
+      .submit-button,
+      .cancel-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .submit-button {
+        background-color: #007bff;
+        color: #fff;
+      }
+      
+      .cancel-button {
+        background-color: #dc3545;
+        color: #fff;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+
+        height: 100vh;
+        background-color: #000;
+      }
+      
+      h1 {
+        justify-content: center;
+        text-align: center;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: 2em;
+        letter-spacing: 4px;
+        overflow: hidden;
+        background: linear-gradient(90deg, #000, #fff, #000);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 3s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      }
+      
+      @keyframes animate {
+        0% {
+          background-position: -500%;
+        }
+        100% {
+          background-position: 500%;
+        }
+      }
